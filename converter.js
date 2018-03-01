@@ -17,6 +17,8 @@ function clearTemp() {
  // output Converted Temperature
  var outputTemp = document.getElementById("converted-temp");
  var convertedTemp = 0;
+ let tempColorC = 0;
+ let tempColorF = 0;
 
 
     // convert to celcius
@@ -42,20 +44,20 @@ function clearTemp() {
             // console.log("Checking C: ", tempInput);
             convertedTemp = toCelsius(Number(tempInput));
             // console.log("Checking converted F: ", convertedTemp);
+            
 
-            if (convertedTemp < 0) {
+            if (tempColorC < 0) {
                 outputTemp.style.color = "blue";
 
-            } else if (convertedTemp >= 0 && convertedTemp < 33) {
+            } else if (tempColorC >= 0 && tempColorC <= 32) {
                 outputTemp.style.color = "green";
 
-            } else if (convertedTemp > 33) {
+            } else if (tempColorC > 33) {
                 outputTemp.style.color = "red";
             };
+            tempColorC = convertedTemp.toFixed(2) + " degree Celsius";
 
-            let tempColor = convertedTemp.toFixed(2) + " degree Celsius";
-            
-            outputTemp = tempColor;
+            outputTemp.innerHTML = tempColorC;
 
             console.log("what is outputTemp.innerHTML showing?", outputTemp);
 
@@ -65,22 +67,25 @@ function clearTemp() {
             convertedTemp = toFarenheit(Number(tempInput));
             console.log("Checking converted F: ", convertedTemp);
 
-            if (convertedTemp < 32) {
+            // tempColorF = convertedTemp.toFixed(2) + " degree Fahrenheit";
+            
+            // outputTemp.innerHTML = tempColorF;
+
+            if (tempColorF < 32) {
                 outputTemp.style.color = "blue";
 
-            } else if (convertedTemp >= 32 && convertedTemp < 91) {
+            } else if (tempColorF >= 32 && tempColorF <= 90) {
                 outputTemp.style.color = "green";
 
-            } else if (convertedTemp > 90) {
+            } else if (tempColorF > 90) {
                 outputTemp.style.color = "red";
             };
 
-            let tempColor = convertedTemp.toFixed(2) + " degree Fahrenheit";
-            
-            outputTemp = tempColor;
-
             console.log("what is outputTemp.innerHTML showing?", outputTemp);
 
+            tempColorF = convertedTemp.toFixed(2) + " degree Fahrenheit";
+            
+            outputTemp.innerHTML = tempColorF;
         };
         //document.getElementById("converted-temp").innerHTML = convertedTemp + " degrees Fahren";
    };
