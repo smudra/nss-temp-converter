@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Temperature converter</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Temperature Converter</title>
 </head>
-<body>
-    <p>Temperature Converter</p>
-    <form action="">
-        <input type="radio" name="celcius" value="Celcius"> Celcius &nbsp;
-        <input type="radio" name="temp" value="farenheit"> Farenheit
-      </form>
-    <input type="text" name="temp" value="Enter a temperature" id="input-field">
-    <button>Submit</button>
-    <button type="button" onclick="clearTemp();">Clear Text</button>
+<body class="temp">
+    <h1 class="header">Temperature Converter</h1>
+    <p>Select the Celsius to convert to C and Fahrenheit to F degrees</p>
+    <div class="form-area">
+        <form action="">
+            
+            <input type="radio" name="temp" value="Celcius" id="celcius"> Celcius &nbsp;
+
+            <input type="radio" name="temp" value="farenheit" id="farenheit"> Fahrenheit
+        </form>
+
+        <input class="btn-both" type="text" name="temp" placeholder="Enter a temperature" id="input-temp">
+        <button type="submit" value="Submit" id="converter" class="btn-both">Submit</button>
+
+        <button type="button" class="btn-both" onclick="clearTemp();">Clear Text</button>
+    </div>
+
     <div>
-        <p>Here's the convertion:</p>
+        <h3>Here's the Converted Temperature:</h3>
         <p id ="converted-temp"></p>
     </div>
 
