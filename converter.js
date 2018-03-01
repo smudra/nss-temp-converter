@@ -55,8 +55,8 @@ function clearTemp() {
             } else if (tempColorC > 33) {
                 outputTemp.style.color = "red";
             };
-            tempColorC = convertedTemp.toFixed(2) + " degree Celsius";
 
+            tempColorC = convertedTemp.toFixed(2) + " degree Celsius";
             outputTemp.innerHTML = tempColorC;
 
             console.log("what is outputTemp.innerHTML showing?", outputTemp);
@@ -66,10 +66,6 @@ function clearTemp() {
             console.log("Checking F: ", tempInput);
             convertedTemp = toFarenheit(Number(tempInput));
             console.log("Checking converted F: ", convertedTemp);
-
-            // tempColorF = convertedTemp.toFixed(2) + " degree Fahrenheit";
-            
-            // outputTemp.innerHTML = tempColorF;
 
             if (tempColorF < 32) {
                 outputTemp.style.color = "blue";
@@ -91,10 +87,3 @@ function clearTemp() {
    };
    console.log("convert to F", convertedTemp);
 
-//console.log(determineConverter("outputTemp", outputTemp));
-   // To Create colors for temperature
-//    if (outputTemp )
-
-//    if (outputTemp.innerHTML >= 32 && outputTemp.innerHTML <= 90) {
-//         outputTemp.style.color = "red";
-//    }
