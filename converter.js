@@ -80,8 +80,7 @@ function clearTemp() {
 
             
 
-            tempColorF = convertedTemp.toFixed(2) + " degree Celsius";
-            
+            tempColorF = convertedTemp.toFixed(2) + " degree Celsius";           
             outputTemp.innerHTML = tempColorF;
         };
         //document.getElementById("converted-temp").innerHTML = convertedTemp + " degrees Fahren";
@@ -91,7 +90,7 @@ function clearTemp() {
 
 
 
-// Working code 
+// --- Working code  --- //
 // if (celcius.checked) {
 //     // console.log("Checking C: ", tempInput);
 //     convertedTemp = toFarenheit(Number(tempInput));
